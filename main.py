@@ -13,7 +13,7 @@ config.read('arquivo_novo.txt')
 
 # Acessando o Centreon
 driver = webdriver.Chrome()
-driver.get('https://centreon-testes.sollobrasil.com.br/')
+driver.get('https://centreon.teste.com.br/')
 wait = WebDriverWait(driver, 10)
 username_input1 = wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, '[aria-label="Alias"]')))
 password_input1 = wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, '[aria-label="Password"]')))
@@ -26,7 +26,7 @@ connect_button.click()
 time.sleep(5)
 
 # Navegando até a página de cadastro de hosts
-driver.get('https://centreon-testes.sollobrasil.com.br/centreon/main.php?p=601&o=a')
+driver.get('https://centreon.teste.com.br/centreon/main.php?p=601&o=a')
 time.sleep(5)
 
 # Preenchendo os campos para cada host
@@ -88,5 +88,5 @@ for section in config.sections():
     time.sleep(5)
 
     # Navegando até a página de cadastro de hosts
-    driver.get('https://centreon-testes.sollobrasil.com.br/centreon/main.php?p=601&o=a')
+    driver.get('https://centreon.teste.com.br/centreon/main.php?p=601&o=a')
     time.sleep(5)
